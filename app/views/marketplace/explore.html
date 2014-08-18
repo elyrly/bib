@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+ <style>
+
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var map_canvas = document.getElementById('map_canvas');
+        var map_options = {
+          center: new google.maps.LatLng(37.7833, -122.4167),
+          zoom: 10,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(map_canvas, map_options)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog Home - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/blog-home.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+
+                <h1 class="page-header">
+
+
+                    Upcoming Events
+
+                </h1>
+
+
+<%= render "/event1" %>
+
+<br>
+<br>
+<%= render "/event2" %>
+
+<br>
+<br>
+<%= render "/event3" %>
+
+                <hr>
+
+                <!-- Pager -->
+                <ul class="pager">
+             <!--        <li class="previous">
+                        <a href="#">&larr; Older</a>
+                    </li> -->
+                    <li class="next">
+                        <a href="#">More &rarr;</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Event Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Event Search Well -->
+                <div class="well">
+                    <h4>Event Search</h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Popular Event Well -->
+                <div class="well">
+                    <h4>Popular Events</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">NYC Marathon</a>
+                                </li>
+                                <li><a href="#">Chicago Marathon</a>
+                                </li>
+                                <li><a href="#">Boston Marathon</a>
+                                </li>
+                                <li><a href="#">LA Marathon</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Twin Cities Marathon</a>
+                                </li>
+                                <li><a href="#">Portland Marathon</a>
+                                </li>
+                                <li><a href="#">Sparatan: Monterey</a>
+                                </li>
+                                <li><a href="#">SF Marathon</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+
+
+                    <div class="well">
+                    <h4>Map View</h4>
+ <div id="map_canvas"></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
